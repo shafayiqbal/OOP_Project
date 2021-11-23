@@ -1,0 +1,8 @@
+- Add lanes to bg
+- Convert sheep to png and remove background
+- Convert cars to png and remove background
+- Merge cars and sheep image files into one
+
+- Start developing sheep and car classes
+- Implement new features into the classes
+- Implement game and JamaloClasses (Jamalo Class will be like the Battlefield classes and will run under game class)
