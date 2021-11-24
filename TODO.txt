@@ -6,5 +6,7 @@
 - Start developing sheep and car classes
 - Implement new features into the classes
 - Implement game and JamaloClasses (Jamalo Class will be like the Battlefield classes and will run under game class)
+- Decide on timer mechanism
+- Cars will collide
 
 - Make project update vids
