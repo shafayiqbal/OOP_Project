@@ -20,7 +20,8 @@ void Sheep::move(char x)
     }
     else if (x == 's')
     {
-        mover.y += 54;
+        if (mover.y + 160 <= 600)
+            mover.y += 54;
     }
     else if (x == 'a')
     {
