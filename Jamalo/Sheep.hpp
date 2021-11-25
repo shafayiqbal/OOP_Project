@@ -7,7 +7,8 @@ private:
     SDL_Rect src, mover;
 
 public:
-    Sheep(SDL_Renderer *rend, SDL_Texture *ast, SDL_Rect mov);
+    Sheep(SDL_Renderer *rend, SDL_Texture *ast);
 
     void draw();
+    void move(char x);
 };
