@@ -1,4 +1,7 @@
 #include "Jamalo.hpp"
+#include "Racecar.hpp"
+#include "Car.hpp"
+#include "Bike.hpp"
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -32,8 +35,9 @@ void Jamalo::createObjects(int x, int y)
         switch (car_prob)
         {
         case 1:
+            Car
         }
-        }
+    }
 }
 
 void Jamalo::move(char x)
