@@ -136,13 +136,13 @@ void Game::run()
                 quit = true;
             }
 
-            if (e.type == SDL_MOUSEBUTTONDOWN)
-            {
-                //this is a good location to add pigeon in linked list.
-                int xMouse, yMouse;
-                SDL_GetMouseState(&xMouse, &yMouse);
-                Jamalo.createObjects(xMouse, yMouse);
-            }
+            // if (e.type == SDL_MOUSEBUTTONDOWN)
+            // {
+            //     //this is a good location to add pigeon in linked list.
+            //     int xMouse, yMouse;
+            //     SDL_GetMouseState(&xMouse, &yMouse);
+            //     Jamalo.createObjects(xMouse, yMouse);
+            // }
 
             if (e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_w)
                 Jamalo.move('w');
@@ -156,8 +156,8 @@ void Game::run()
 
         SDL_RenderClear(gRenderer);                      //removes everything from renderer
         SDL_RenderCopy(gRenderer, gTexture, NULL, NULL); //Draws background to renderer
-        //***********************draw the objects here********************
-
+                                                         //***********************draw the objects here********************
+        Jamalo.createObjects();
         Jamalo.drawObjects();
         //****************************************************************
         SDL_RenderPresent(gRenderer); //displays the updated renderer

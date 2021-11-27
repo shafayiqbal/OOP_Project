@@ -2,8 +2,10 @@
 
 Sheep::Sheep(SDL_Renderer *rend, SDL_Texture *ast) : Unit(rend, ast)
 {
-    src = {0, 0, 100, 100};
-    mover = {-30, 385, 200, 150};
+    src = {16, 23, 43, 42};
+    mover = {10, 430, 50, 50};
+
+    // put this in constructor !!!!
 }
 
 void Sheep::draw()
@@ -16,12 +18,13 @@ void Sheep::move(char x)
 
     if (x == 'w')
     {
-        mover.y -= 54;
+        if (mover.y - 55 >= 300)
+            mover.y -= 55;
     }
     else if (x == 's')
     {
-        if (mover.y + 160 <= 600)
-            mover.y += 54;
+        if (mover.y + mover.h + 55 <= 600)
+            mover.y += 55;
     }
     else if (x == 'a')
     {

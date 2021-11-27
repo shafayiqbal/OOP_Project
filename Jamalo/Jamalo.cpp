@@ -2,6 +2,8 @@
 #include "Racecar.hpp"
 #include "Car.hpp"
 #include "Bike.hpp"
+#include "Truck.hpp"
+#include "Truck2.hpp"
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -21,21 +23,67 @@ void Jamalo::drawObjects()
     j.draw();
 }
 
-void Jamalo::createObjects(int x, int y)
+void Jamalo::createObjects()
 {
-    SDL_Rect mov = {x, y, 100, 35};
+    // SDL_Rect mov = {900, 555, 80, 40};
+    // SDL_Rect mov{900, 490, 80, 40};
+    // SDL_Rect mov{900, 435, 80, 40};
+    // SDL_Rect mov{900, 380, 80, 40};
+    // SDL_Rect mov{900, 325, 80, 40};
+
+    SDL_Rect mov[5];
+    mov[0] = {900, 555, 80, 40};
+    mov[1] = {900, 490, 80, 40};
+    mov[2] = {900, 435, 80, 40};
+    mov[3] = {900, 380, 80, 40};
+    mov[4] = {900, 325, 80, 40};
+
+    // Make array code look cleaner !!!!
+
+    int lane = rand() % 5 + 1;
 
     // Add random vehicle generator function
-
-    int prob = rand() % 3 + 1;
+    cout << "Vehicle generated" << endl;
+    int prob = rand() % 5 + 1;
     int car_prob;
     if (prob == 2)
     {
-        car_prob = rand() % 5 + 1;
+        car_prob = rand() % 10 + 1;
         switch (car_prob)
         {
         case 1:
-            Car
+        {
+            Car c(gRenderer, assets, mov[lane - 1]);
+            vehicles.push_back(c);
+            break;
+        }
+
+        case 2:
+        {
+            // cout << "hello" << endl;
+            RaceCar rc(gRenderer, assets, mov[lane - 1]);
+            vehicles.push_back(rc);
+            break;
+        }
+        case 3:
+        {
+            Truck t(gRenderer, assets, mov[lane - 1]);
+            vehicles.push_back(t);
+            break;
+        }
+        case 4:
+        {
+            Truck2 t2(gRenderer, assets, mov[lane - 1]);
+            vehicles.push_back(t2);
+            break;
+        }
+        case 5:
+            // cout << "Hello" << endl;
+            {
+                Bike b(gRenderer, assets, mov[lane - 1]);
+                vehicles.push_back(b);
+                break;
+            }
         }
     }
 }

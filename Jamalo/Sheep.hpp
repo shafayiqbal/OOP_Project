@@ -5,6 +5,7 @@ class Sheep : public Unit
 
 private:
     SDL_Rect src, mover;
+    int nLives;
 
 public:
     Sheep(SDL_Renderer *rend, SDL_Texture *ast);

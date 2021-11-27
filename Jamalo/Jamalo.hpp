@@ -14,6 +14,6 @@ class Jamalo
 public:
     Jamalo(SDL_Renderer *, SDL_Texture *);
     void drawObjects();
-    void createObjects(int x, int y);
+    void createObjects();
     void move(char x);
 };

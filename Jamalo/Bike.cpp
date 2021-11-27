@@ -1,8 +1,8 @@
 #include "Bike.hpp"
 
-Car::Car(SDL_Renderer *rend, SDL_Texture *ast, SDL_Rect mov) : Vehicle(rend, ast, mov, {0, 0, 0, 0}) {}
+Bike::Bike(SDL_Renderer *rend, SDL_Texture *ast, SDL_Rect mov) : Vehicle(rend, ast, mov, {97, 75, 50, 50}, 10) {}
 
-void Car::draw()
+void Bike::draw()
 {
     Vehicle::draw();
 }
