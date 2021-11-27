@@ -13,12 +13,21 @@ Jamalo::Jamalo(SDL_Renderer *renderer, SDL_Texture *asst) : j(renderer, asst), g
 {
 }
 
+bool Jamalo::hitRegistered(Vehicle v)
+{
+    // Add collision code
+}
+
 void Jamalo::drawObjects()
 {
 
     for (auto &element : vehicles)
     {
         element.draw();
+        if (hitRegistered(element))
+        {
+            j.getHit();
+        }
     }
     j.draw();
 }

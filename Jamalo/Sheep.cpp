@@ -1,4 +1,7 @@
+
+#include <iostream>
 #include "Sheep.hpp"
+using namespace std;
 
 Sheep::Sheep(SDL_Renderer *rend, SDL_Texture *ast) : Unit(rend, ast)
 {
@@ -34,4 +37,9 @@ void Sheep::move(char x)
     {
         mover.x += 10;
     }
+}
+
+void getHit()
+{
+    cout << "SHEEP HIT !!!!!" << endl;
 }

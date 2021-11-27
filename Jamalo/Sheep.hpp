@@ -12,4 +12,7 @@ public:
 
     void draw();
     void move(char x);
+    void getHit();
+
+    friend bool hitRegistered();
 };

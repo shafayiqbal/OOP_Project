@@ -16,4 +16,5 @@ public:
     void drawObjects();
     void createObjects();
     void move(char x);
+    bool hitRegistered(Vehicle v);
 };

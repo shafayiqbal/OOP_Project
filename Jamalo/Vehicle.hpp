@@ -11,4 +11,5 @@ private:
 public:
     Vehicle(SDL_Renderer *rend, SDL_Texture *ast, SDL_Rect mov, SDL_Rect src, int s);
     void draw();
+    friend bool hitRegistered();
 };

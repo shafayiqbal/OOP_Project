@@ -1,13 +1,11 @@
-- Add lanes to bg
-- Convert sheep to png and remove background
-- Convert cars to png and remove background
-- Merge cars and sheep image files into one
-
-- Start developing sheep and car classes
-- Implement new features into the classes
-- Implement game and JamaloClasses (Jamalo Class will be like the Battlefield classes and will run under game class)
-- Decide on timer mechanism
-- Cars will collide
+- Pick better sprite and background files if possible
+- May have to add grid system
+- Implement Sheep hit mechanism
+- Implement Car Collision Mechanism
+- Improve random generator so spawning cars dont overlap
+- Add timer and lives
+- Make start, lose and win screens
+- Add bg music
 
 - Make project update vids
--edit
+
