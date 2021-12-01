@@ -31,11 +31,13 @@ void Sheep::move(char x)
     }
     else if (x == 'a')
     {
-        mover.x -= 10;
+        if (mover.x - 10 >= 0)
+            mover.x -= 10;
     }
     else if (x == 'd')
     {
-        mover.x += 10;
+        if (mover.x + mover.w + 10 <= 1000)
+            mover.x += 10;
     }
 }
 

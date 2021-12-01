@@ -2,7 +2,7 @@
 - May have to add grid system
 - Implement Sheep hit mechanism
 - Implement Car Collision Mechanism
-- Improve random generator so spawning cars dont overlap
+- Stop cars from overlapping
 - Add timer and lives
 - Make start, lose and win screens
 - Add bg music

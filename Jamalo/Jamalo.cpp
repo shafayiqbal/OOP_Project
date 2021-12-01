@@ -1,5 +1,6 @@
 #include "Jamalo.hpp"
 #include "Racecar.hpp"
+#include "Sheep.hpp"
 #include "Car.hpp"
 #include "Bike.hpp"
 #include "Truck.hpp"
@@ -8,14 +9,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+using namespace std;
 
 Jamalo::Jamalo(SDL_Renderer *renderer, SDL_Texture *asst) : j(renderer, asst), gRenderer(renderer), assets(asst)
 {
 }
 
-bool Jamalo::hitRegistered(Vehicle v)
+bool Jamalo::hitRegistered(Sheep j)
 {
     // Add collision code
+    // cout << j.nLives;
 }
 
 void Jamalo::drawObjects()
@@ -24,10 +27,10 @@ void Jamalo::drawObjects()
     for (auto &element : vehicles)
     {
         element.draw();
-        if (hitRegistered(element))
-        {
-            j.getHit();
-        }
+        // if (hitRegistered(element))
+        // {
+        //     j.getHit();
+        // }
     }
     j.draw();
 }
@@ -54,6 +57,8 @@ void Jamalo::createObjects()
     // Add random vehicle generator function
     cout << "Vehicle generated" << endl;
     int prob = rand() % 5 + 1;
+    int prob1 = rand() % 5 + 1;
+    prob = (prob1 + prob) / 2;
     int car_prob;
     if (prob == 2)
     {

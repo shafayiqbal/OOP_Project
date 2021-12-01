@@ -1,3 +1,4 @@
+#pragma once
 #include <SDL.h>
 #include "Vehicle.hpp"
 #include "Sheep.hpp"
@@ -16,5 +17,5 @@ public:
     void drawObjects();
     void createObjects();
     void move(char x);
-    bool hitRegistered(Vehicle v);
+    bool hitRegistered(Sheep j);
 };
