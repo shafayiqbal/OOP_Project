@@ -9,6 +9,9 @@
 
 class Game
 {
+    // Game state
+    bool start = false;
+
     //Screen dimension constants
     const int SCREEN_WIDTH = 1000;
     const int SCREEN_HEIGHT = 600;

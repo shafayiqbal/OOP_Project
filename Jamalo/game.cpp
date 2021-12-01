@@ -62,7 +62,7 @@ bool Game::loadMedia()
     bool success = true;
 
     assets = loadTexture("assets.png");
-    gTexture = loadTexture("bg.png");
+    gTexture = loadTexture("start.png");
     if (assets == NULL || gTexture == NULL)
     {
         printf("Unable to run due to error: %s\n", SDL_GetError());
@@ -144,6 +144,11 @@ void Game::run()
             //     Jamalo.createObjects(xMouse, yMouse);
             // }
 
+            if (e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_SPACE)
+            {
+                gTexture = loadTexture("bg.png");
+                start = true;
+            }
             if (e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_w)
                 Jamalo.move('w');
             if (e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_s)
@@ -157,8 +162,11 @@ void Game::run()
         SDL_RenderClear(gRenderer);                      //removes everything from renderer
         SDL_RenderCopy(gRenderer, gTexture, NULL, NULL); //Draws background to renderer
                                                          //***********************draw the objects here********************
-        Jamalo.createObjects();
-        Jamalo.drawObjects();
+        if (start)
+        {
+            Jamalo.createObjects();
+            Jamalo.drawObjects();
+        }
         //****************************************************************
         SDL_RenderPresent(gRenderer); //displays the updated renderer
 
