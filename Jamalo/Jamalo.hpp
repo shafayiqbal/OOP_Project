@@ -18,4 +18,6 @@ public:
     void createObjects();
     void move(char x);
     bool hitRegistered(Vehicle v);
+    // bool hitRegistered()
+    void radar(Vehicle &currentV);
 };

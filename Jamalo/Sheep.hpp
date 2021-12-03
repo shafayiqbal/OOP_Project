@@ -18,4 +18,5 @@ public:
     void draw();
     void move(char x);
     void getHit();
+    // friend bool Jamalo::hitRegistered(Vehicle v);
 };

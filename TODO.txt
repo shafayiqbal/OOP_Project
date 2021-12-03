@@ -1,11 +1,10 @@
 - Pick better sprite and background files if possible
-- May have to add grid system
 - Make sheep hit without getter
-- Implement Car Collision Mechanism
-- Stop cars from overlapping
+- Implement Car Explosion
 - Add timer and lives
 - Make start, lose and win screens
 - Add bg music
+- Delete objects
 
-- Make project update vids
+
 
