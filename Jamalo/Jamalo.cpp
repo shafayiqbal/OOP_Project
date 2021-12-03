@@ -15,10 +15,24 @@ Jamalo::Jamalo(SDL_Renderer *renderer, SDL_Texture *asst) : j(renderer, asst), g
 {
 }
 
-bool Jamalo::hitRegistered(Sheep j)
+bool Jamalo::hitRegistered(Vehicle vehicle_hit)
 {
     // Add collision code
-    // cout << j.nLives;
+    SDL_Rect v = vehicle_hit.getter();
+    SDL_Rect s = j.getter();
+
+    if (
+        s.x < (v.x + v.w) and (s.x + s.w) > v.x and (s.y + s.h) > v.y and s.y < (v.y + v.h))
+    {
+        return true;
+    }
+    else
+        return false;
+
+    // if ((v.x >= s.x and v.x <= (s.x + s.w) and v.y >= s.y and v.y <= (s.y + s.h)))
+    //     return true;
+    // else
+    //     return false;
 }
 
 void Jamalo::drawObjects()
@@ -27,10 +41,10 @@ void Jamalo::drawObjects()
     for (auto &element : vehicles)
     {
         element.draw();
-        // if (hitRegistered(element))
-        // {
-        //     j.getHit();
-        // }
+        if (hitRegistered(element))
+        {
+            j.getHit();
+        }
     }
     j.draw();
 }
@@ -55,7 +69,7 @@ void Jamalo::createObjects()
     int lane = rand() % 5 + 1;
 
     // Add random vehicle generator function
-    cout << "Vehicle generated" << endl;
+    // cout << "Vehicle generated" << endl;
     int prob = rand() % 5 + 1;
     int prob1 = rand() % 5 + 1;
     prob = (prob1 + prob) / 2;

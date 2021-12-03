@@ -5,8 +5,6 @@ using namespace std;
 
 Sheep::Sheep(SDL_Renderer *rend, SDL_Texture *ast) : Unit(rend, ast)
 {
-    src = {16, 23, 43, 42};
-    mover = {10, 430, 50, 50};
 
     // put this in constructor !!!!
 }
@@ -41,7 +39,12 @@ void Sheep::move(char x)
     }
 }
 
-void getHit()
+SDL_Rect Sheep::getter()
+{
+    return mover;
+}
+
+void Sheep::getHit()
 {
     cout << "SHEEP HIT !!!!!" << endl;
 }
