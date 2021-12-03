@@ -1,6 +1,6 @@
 - Pick better sprite and background files if possible
 - May have to add grid system
-- Implement Sheep hit mechanism
+- Make sheep hit without getter
 - Implement Car Collision Mechanism
 - Stop cars from overlapping
 - Add timer and lives

@@ -41,7 +41,12 @@ void Sheep::move(char x)
     }
 }
 
-void getHit()
+SDL_Rect Sheep::getter()
+{
+    return mover;
+}
+
+void Sheep::getHit()
 {
     cout << "SHEEP HIT !!!!!" << endl;
 }

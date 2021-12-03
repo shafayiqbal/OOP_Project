@@ -1,11 +1,9 @@
 #pragma once
 #include "Unit.hpp"
-// #include "Jamalo.hpp"
 using namespace std;
+
 class Sheep : public Unit
 {
-
-    // friend bool Jamalo::hitRegistered(Sheep j);
 
 private:
     SDL_Rect src, mover;
@@ -15,6 +13,7 @@ public:
     // SDL_Rect mover;
     Sheep(SDL_Renderer *rend, SDL_Texture *ast);
 
+    SDL_Rect getter();
     void draw();
     void move(char x);
     void getHit();
