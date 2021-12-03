@@ -7,3 +7,8 @@ void Vehicle::draw()
     mover.x -= speed;
     Unit::draw(src, mover);
 }
+
+SDL_Rect Vehicle::getter()
+{
+    return mover;
+}

@@ -6,7 +6,8 @@ class Sheep : public Unit
 {
 
 private:
-    SDL_Rect src, mover;
+    SDL_Rect src = {16, 23, 43, 42};
+    SDL_Rect mover = {10, 430, 50, 50};
     int nLives;
 
 public:

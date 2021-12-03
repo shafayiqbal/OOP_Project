@@ -5,8 +5,6 @@ using namespace std;
 
 Sheep::Sheep(SDL_Renderer *rend, SDL_Texture *ast) : Unit(rend, ast)
 {
-    src = {16, 23, 43, 42};
-    mover = {10, 430, 50, 50};
 
     // put this in constructor !!!!
 }
