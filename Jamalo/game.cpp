@@ -161,11 +161,18 @@ void Game::run()
 
         SDL_RenderClear(gRenderer);                      //removes everything from renderer
         SDL_RenderCopy(gRenderer, gTexture, NULL, NULL); //Draws background to renderer
-                                                         //***********************draw the objects here********************
-        if (start)
+
+        if (not end)
+        { //***********************draw the objects here********************
+            if (start)
+            {
+                Jamalo.createObjects();
+                Jamalo.drawObjects();
+            }
+        }
+        else
         {
-            Jamalo.createObjects();
-            Jamalo.drawObjects();
+            gTexture = loadTexture("endbg11.png");
         }
         //****************************************************************
         SDL_RenderPresent(gRenderer); //displays the updated renderer

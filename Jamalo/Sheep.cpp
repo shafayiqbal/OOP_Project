@@ -39,7 +39,7 @@ void Sheep::move(char x)
     }
 }
 
-SDL_Rect Sheep::getter()
+SDL_Rect Sheep::getter() const
 {
     return mover;
 }

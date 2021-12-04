@@ -42,6 +42,25 @@ void Jamalo::radar(Vehicle &current)
     current.draw(flag);
 }
 
+bool Jamalo::hitRegistered(Vehicle v, list<Vehicle> &vehicles)
+{
+    SDL_Rect vc = v.getter();
+
+    bool flag = false;
+    for (auto next : vehicles)
+    {
+        SDL_Rect nextc = next.getter();
+
+        if (
+            vc.x < (nextc.x + nextc.w) and (vc.x + vc.w) > nextc.x and (vc.y + vc.h) > nextc.y and vc.y < (nextc.y + nextc.h))
+        {
+            flag = true;
+        }
+    }
+
+    return flag;
+}
+
 bool Jamalo::hitRegistered(Vehicle vehicle_hit)
 {
 
@@ -133,7 +152,6 @@ void Jamalo::createObjects()
 
         case 2:
         {
-            // cout << "hello" << endl;
             RaceCar rc(gRenderer, assets, mov[lane - 1]);
             vehicles.push_back(rc);
             break;

@@ -14,7 +14,7 @@ public:
     // SDL_Rect mover;
     Sheep(SDL_Renderer *rend, SDL_Texture *ast);
 
-    SDL_Rect getter();
+    SDL_Rect getter() const;
     void draw();
     void move(char x);
     void getHit();

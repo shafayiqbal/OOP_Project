@@ -11,6 +11,7 @@ class Game
 {
     // Game state
     bool start = false;
+    bool end = false;
 
     //Screen dimension constants
     const int SCREEN_WIDTH = 1000;

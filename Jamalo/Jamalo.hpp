@@ -18,6 +18,7 @@ public:
     void createObjects();
     void move(char x);
     bool hitRegistered(Vehicle v);
+    bool hitRegistered(Vehicle v, list<Vehicle> &vehicles);
     // bool hitRegistered()
     void radar(Vehicle &currentV);
 };
