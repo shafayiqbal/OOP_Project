@@ -22,7 +22,7 @@ bool Game::init()
         }
 
         //Create window
-        gWindow = SDL_CreateWindow("HU Mania", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+        gWindow = SDL_CreateWindow("Jamalo The Sheep", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
         if (gWindow == NULL)
         {
             printf("Window could not be created! SDL Error: %s\n", SDL_GetError());
@@ -49,6 +49,11 @@ bool Game::init()
                     printf("SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError());
                     success = false;
                 }
+                if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0)
+                {
+                    printf("SDL_mixer could not initialize! SDL_mixer Error: %s\n", Mix_GetError());
+                    success = false;
+                }
             }
         }
     }
@@ -61,11 +66,19 @@ bool Game::loadMedia()
     //Loading success flag
     bool success = true;
 
-    assets = loadTexture("assets.png");
+    assets = loadTexture("assetsfinal.png");
     gTexture = loadTexture("startbg.png");
     if (assets == NULL || gTexture == NULL)
     {
         printf("Unable to run due to error: %s\n", SDL_GetError());
+        success = false;
+    }
+    bgMusic = Mix_LoadMUS("jamalo2.wav");
+    // gMusic = Mix_LoadMUS("goat.wav");
+
+    if (bgMusic == NULL)
+    {
+        printf("Unable to load music: %s \n", Mix_GetError());
         success = false;
     }
 
@@ -87,7 +100,10 @@ void Game::close()
     gWindow = NULL;
     gRenderer = NULL;
     //Quit SDL subsystems
+    Mix_FreeMusic(bgMusic);
+    bgMusic = NULL;
     IMG_Quit();
+    Mix_Quit();
     SDL_Quit();
 }
 
@@ -148,6 +164,7 @@ void Game::run()
             {
                 gTexture = loadTexture("bg.png");
                 start = true;
+                // end = false;
             }
             if (e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_w)
                 Jamalo.move('w');
@@ -168,6 +185,11 @@ void Game::run()
             {
                 Jamalo.createObjects();
                 Jamalo.drawObjects();
+                end = Jamalo.isOver();
+                if (Mix_PlayingMusic() == 0)
+                {
+                    Mix_PlayMusic(bgMusic, 2);
+                }
             }
         }
         else

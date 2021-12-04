@@ -11,18 +11,12 @@ void Vehicle::draw(bool flag)
 
     if (flag)
     {
-        // if (changing_lane_down and (mover.y + mover.h + 55 < 600))
-        // {
-        //     mover.y += 11;
-        // }
-        // if (changing_lane_up and (mover.y - 55 >= 325))
-        // {
-        //     mover.y -= 11;
-        // }
+
         mover.x -= speed;
     }
-    changeLaneDown();
-    changeLaneUp();
+
+    // changeLaneDown();
+    // changeLaneUp();
     Unit::draw(src, mover);
 }
 
@@ -30,9 +24,13 @@ void Vehicle::changeLaneUp()
 {
     int prob = rand() % 15 + 1;
 
-    if (prob == 6 and changing_lane_up == false and changing_lane_up == false)
+    if (prob == 6 and changing_lane_down == false and changing_lane_up == false)
     {
         changing_lane_up = true;
+    }
+
+    if (changing_lane_up)
+    {
         mover.y -= 11;
     }
 
@@ -49,8 +47,13 @@ void Vehicle::changeLaneDown()
     if (prob == 3 and changing_lane_down == false and changing_lane_up == false)
     {
         changing_lane_down = true;
+    }
+
+    if (changing_lane_down)
+    {
         mover.y += 11;
     }
+
     if (mover.y % 5 == 0)
     {
         changing_lane_down = false;

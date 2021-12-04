@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "Jamalo.hpp"
+#include <SDL_mixer.h>
 
 class Game
 {
@@ -27,6 +28,7 @@ class Game
     SDL_Texture *gTexture = NULL;
     //global reference to png image sheets
     SDL_Texture *assets = NULL;
+    Mix_Music *bgMusic = NULL;
 
 public:
     bool init();

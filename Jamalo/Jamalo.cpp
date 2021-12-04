@@ -9,10 +9,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "Debris.hpp"
 using namespace std;
 
-Jamalo::Jamalo(SDL_Renderer *renderer, SDL_Texture *asst) : j(renderer, asst), gRenderer(renderer), assets(asst)
+// Jamalo::Jamalo(SDL_Renderer *renderer, SDL_Texture *asst) : j(renderer, asst), gRenderer(renderer), assets(asst)
+// {
+// }
+
+Jamalo::Jamalo(SDL_Renderer *renderer, SDL_Texture *asst) : j(renderer, asst), gRenderer(renderer), assets(asst), t(renderer, asst), l1(renderer, asst, {935, 50, 55, 54}), l2(renderer, asst, {935, 100, 55, 54}), l3(renderer, asst, {935, 150, 55, 54}), nLives(3) {}
+
+bool Jamalo::isOver()
 {
+    if (nLives == 0)
+    {
+        return true;
+    }
 }
 
 void Jamalo::radar(Vehicle &current)
@@ -40,6 +51,10 @@ void Jamalo::radar(Vehicle &current)
     }
 
     current.draw(flag);
+    if (moverc.x < -10)
+    {
+        vehicles.remove(current);
+    }
 }
 
 bool Jamalo::hitRegistered(Vehicle v, list<Vehicle> &vehicles)
@@ -90,7 +105,7 @@ bool Jamalo::hitRegistered(Vehicle vehicle_hit)
 
 void Jamalo::drawObjects()
 {
-
+    // Vehicle *ptr = NULL;
     for (auto &element : vehicles)
     {
 
@@ -99,9 +114,35 @@ void Jamalo::drawObjects()
         if (hitRegistered(element))
         {
             j.getHit();
+            nLives--;
+            // ptr = &element;
+            // Debris d(gRenderer, assets, element.getter());
+            // vehicles.remove(element);
+            //
+            // d.animate();
         }
     }
+
     j.draw();
+    t.draw();
+    t.count();
+    j.draw();
+
+    if (nLives == 1)
+    {
+        l1.draw();
+    }
+    else if (nLives == 2)
+    {
+        l1.draw();
+        l2.draw();
+    }
+    else if (nLives == 3)
+    {
+        l1.draw();
+        l2.draw();
+        l3.draw();
+    }
 }
 
 void Jamalo::createObjects()
@@ -184,12 +225,14 @@ void Jamalo::move(char x)
     j.move(x);
 }
 
-bool operator!=(SDL_Rect &r1, SDL_Rect &r2)
+bool operator==(Vehicle v1, Vehicle v2)
 {
+    SDL_Rect r1 = v1.getter();
+    SDL_Rect r2 = v2.getter();
     if ((r1.x == r2.x) and (r1.y == r2.y) and (r1.w == r2.w) and (r1.h == r2.h))
     {
-        return false;
+        return true;
     }
     else
-        return true;
+        return false;
 }
