@@ -51,10 +51,11 @@ void Jamalo::radar(Vehicle &current)
     }
 
     current.draw(flag);
-    if (moverc.x < -10)
-    {
-        vehicles.remove(current);
-    }
+    // if (moverc.x < -10)
+    // {
+    //     vehicles.remove(current);
+    //     delete &current;
+    // }
 }
 
 bool Jamalo::hitRegistered(Vehicle v, list<Vehicle> &vehicles)
@@ -115,11 +116,12 @@ void Jamalo::drawObjects()
         {
             j.getHit();
             nLives--;
-            // ptr = &element;
-            // Debris d(gRenderer, assets, element.getter());
-            // vehicles.remove(element);
-            //
-            // d.animate();
+
+            Debris d(gRenderer, assets, element.getter());
+            vehicles.remove(element);
+            // delete &element;
+            d.animate();
+            // delete &d;
         }
     }
 
