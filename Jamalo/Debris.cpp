@@ -1,7 +1,20 @@
 #include "Debris.hpp"
 
+/**
+ * @brief Construct a new Debris:: Debris object
+ * 
+ * @param rend 
+ * @param ast 
+ * @param mov 
+ */
 Debris::Debris(SDL_Renderer *rend, SDL_Texture *ast, SDL_Rect mov) : Unit(rend, ast), mover(mov) {}
 
+/**
+ * @brief Animates and draws the debris
+ * 
+ * 
+ * 
+ */
 void Debris::animate()
 {
     Unit::draw(src, mover);

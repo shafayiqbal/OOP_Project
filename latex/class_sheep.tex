@@ -1,0 +1,105 @@
+\hypertarget{class_sheep}{}\doxysection{Sheep Class Reference}
+\label{class_sheep}\index{Sheep@{Sheep}}
+
+
+This class generates the \mbox{\hyperlink{class_sheep}{Sheep}}.  
+
+
+
+
+{\ttfamily \#include $<$Sheep.\+hpp$>$}
+
+Inheritance diagram for Sheep\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sheep}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sheep_a3dd3efffc1f08af7763bd735cfafa100}{Sheep}} (SDL\+\_\+\+Renderer $\ast$rend, SDL\+\_\+\+Texture $\ast$ast)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_sheep}{Sheep}}\+:\+: \mbox{\hyperlink{class_sheep}{Sheep}} object. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Rect \mbox{\hyperlink{class_sheep_a7e3093a1c75ee284602459573f6a611d}{getter}} () const
+\begin{DoxyCompactList}\small\item\em The getter function for the mover rectangle of the \mbox{\hyperlink{class_sheep}{Sheep}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sheep_a1dc0375456d1bd9f9d157d3dfe7f9eeb}{draw}} ()
+\begin{DoxyCompactList}\small\item\em Draws the sheep. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sheep_a2640e14c762e83d2ce06d6d1453b95b7}{move}} (char x)
+\begin{DoxyCompactList}\small\item\em Moves the sheep. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sheep_afbe9cd243dd99adc299f99c0b0a0bc0f}\label{class_sheep_afbe9cd243dd99adc299f99c0b0a0bc0f}} 
+void {\bfseries get\+Hit} ()
+\begin{DoxyCompactList}\small\item\em A function to display effects when sheep gets hit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class generates the \mbox{\hyperlink{class_sheep}{Sheep}}. 
+
+The protagonist sheep and functionality related to its movement, drawing and the hit reactions are implemented here. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sheep_a3dd3efffc1f08af7763bd735cfafa100}\label{class_sheep_a3dd3efffc1f08af7763bd735cfafa100}} 
+\index{Sheep@{Sheep}!Sheep@{Sheep}}
+\index{Sheep@{Sheep}!Sheep@{Sheep}}
+\doxysubsubsection{\texorpdfstring{Sheep()}{Sheep()}}
+{\footnotesize\ttfamily Sheep\+::\+Sheep (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{rend,  }\item[{SDL\+\_\+\+Texture $\ast$}]{ast }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_sheep}{Sheep}}\+:\+: \mbox{\hyperlink{class_sheep}{Sheep}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rend} & \\
+\hline
+{\em ast} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sheep_a1dc0375456d1bd9f9d157d3dfe7f9eeb}\label{class_sheep_a1dc0375456d1bd9f9d157d3dfe7f9eeb}} 
+\index{Sheep@{Sheep}!draw@{draw}}
+\index{draw@{draw}!Sheep@{Sheep}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Sheep\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the sheep. 
+
+Calls the draw function from the \mbox{\hyperlink{class_unit}{Unit}} class and passes the relevant functions to it. \mbox{\Hypertarget{class_sheep_a7e3093a1c75ee284602459573f6a611d}\label{class_sheep_a7e3093a1c75ee284602459573f6a611d}} 
+\index{Sheep@{Sheep}!getter@{getter}}
+\index{getter@{getter}!Sheep@{Sheep}}
+\doxysubsubsection{\texorpdfstring{getter()}{getter()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Rect Sheep\+::getter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+The getter function for the mover rectangle of the \mbox{\hyperlink{class_sheep}{Sheep}}. 
+
+\begin{DoxyReturn}{Returns}
+SDL\+\_\+\+Rect 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sheep_a2640e14c762e83d2ce06d6d1453b95b7}\label{class_sheep_a2640e14c762e83d2ce06d6d1453b95b7}} 
+\index{Sheep@{Sheep}!move@{move}}
+\index{move@{move}!Sheep@{Sheep}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Sheep\+::move (\begin{DoxyParamCaption}\item[{char}]{x }\end{DoxyParamCaption})}
+
+
+
+Moves the sheep. 
+
+The function takes input from the \mbox{\hyperlink{class_jamalo}{Jamalo}} class and moves the sheep based on the key pressed. If sheep is at the border then it prevents it from moving any further.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sheep.\+hpp\item 
+Sheep.\+cpp\end{DoxyCompactItemize}

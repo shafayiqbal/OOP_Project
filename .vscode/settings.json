@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "list": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "atomic": "cpp",
+        "initializer_list": "cpp",
+        "new": "cpp",
+        "type_traits": "cpp"
     }
 }

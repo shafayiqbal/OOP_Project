@@ -1,0 +1,91 @@
+\hypertarget{class_digit}{}\doxysection{Digit Class Reference}
+\label{class_digit}\index{Digit@{Digit}}
+
+
+\mbox{\hyperlink{class_digit}{Digit}} used in timer.  
+
+
+
+
+{\ttfamily \#include $<$Digit.\+hpp$>$}
+
+Inheritance diagram for Digit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_digit}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_digit_aa3b834ed1f827d698a08d576fa1414b5}{Digit}} (SDL\+\_\+\+Renderer $\ast$rend, SDL\+\_\+\+Texture $\ast$ast, SDL\+\_\+\+Rect mov, SDL\+\_\+\+Rect src)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_digit}{Digit}}\+:\+: \mbox{\hyperlink{class_digit}{Digit}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digit_a7891203a8b287d712b396f531f1b99c1}{draw}} ()
+\begin{DoxyCompactList}\small\item\em Draws the digit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_digit_a5bdd3e57174ac23193c9808bcf995071}{animate}} (unsigned int res)
+\begin{DoxyCompactList}\small\item\em Animates the digit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_digit}{Digit}} used in timer. 
+
+Creates a digit type object to be used in the timer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_digit_aa3b834ed1f827d698a08d576fa1414b5}\label{class_digit_aa3b834ed1f827d698a08d576fa1414b5}} 
+\index{Digit@{Digit}!Digit@{Digit}}
+\index{Digit@{Digit}!Digit@{Digit}}
+\doxysubsubsection{\texorpdfstring{Digit()}{Digit()}}
+{\footnotesize\ttfamily Digit\+::\+Digit (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{rend,  }\item[{SDL\+\_\+\+Texture $\ast$}]{ast,  }\item[{SDL\+\_\+\+Rect}]{mov,  }\item[{SDL\+\_\+\+Rect}]{src }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_digit}{Digit}}\+:\+: \mbox{\hyperlink{class_digit}{Digit}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rend} & \\
+\hline
+{\em ast} & \\
+\hline
+{\em mov} & \\
+\hline
+{\em src} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_digit_a5bdd3e57174ac23193c9808bcf995071}\label{class_digit_a5bdd3e57174ac23193c9808bcf995071}} 
+\index{Digit@{Digit}!animate@{animate}}
+\index{animate@{animate}!Digit@{Digit}}
+\doxysubsubsection{\texorpdfstring{animate()}{animate()}}
+{\footnotesize\ttfamily void Digit\+::animate (\begin{DoxyParamCaption}\item[{unsigned int}]{res }\end{DoxyParamCaption})}
+
+
+
+Animates the digit. 
+
+Changes the src of the digits based on the counter
+
+
+\begin{DoxyParams}{Parameters}
+{\em res} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_digit_a7891203a8b287d712b396f531f1b99c1}\label{class_digit_a7891203a8b287d712b396f531f1b99c1}} 
+\index{Digit@{Digit}!draw@{draw}}
+\index{draw@{draw}!Digit@{Digit}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Digit\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the digit. 
+
+Calls the draw function of the \mbox{\hyperlink{class_unit}{Unit}} class to draw the digit. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Digit.\+hpp\item 
+Digit.\+cpp\end{DoxyCompactItemize}

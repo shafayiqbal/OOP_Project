@@ -2,6 +2,14 @@
 #include "Unit.hpp"
 using namespace std;
 
+/**
+ * @brief Vehicle class, the parent for all vehicles.
+ * 
+ * This class is inherited by Bike, Car, Racecar, Truck and Truck2.
+ * It provides all the functionality relating to the movement of the cars and their speed.
+ * 
+ */
+
 class Vehicle : public Unit
 {
 

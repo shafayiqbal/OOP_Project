@@ -12,12 +12,24 @@
 #include "Debris.hpp"
 using namespace std;
 
-// Jamalo::Jamalo(SDL_Renderer *renderer, SDL_Texture *asst) : j(renderer, asst), gRenderer(renderer), assets(asst)
-// {
-// }
-
+/**
+ * @brief Construct a new Jamalo:: Jamalo object
+ * 
+ * Creates a Jamalo type object and initializes values for all other objects in the game.
+ * 
+ * @param renderer 
+ * @param asst 
+ */
 Jamalo::Jamalo(SDL_Renderer *renderer, SDL_Texture *asst) : j(renderer, asst), gRenderer(renderer), assets(asst), t(renderer, asst), l1(renderer, asst, {935, 50, 55, 54}), l2(renderer, asst, {935, 100, 55, 54}), l3(renderer, asst, {935, 150, 55, 54}), nLives(3) {}
 
+/**
+ * @brief Checks game state
+ * 
+ * Returns true if game is over i.e all 3 lives have been lost.
+ * 
+ * @return true 
+ * @return false 
+ */
 bool Jamalo::isOver()
 {
     if (nLives == 0)
@@ -26,6 +38,14 @@ bool Jamalo::isOver()
     }
 }
 
+/**
+ * @brief Implementation of radar system in the Vehicles
+ * 
+ * The function a vehicle and determines the distance between that vehicle and the vehicle in front of it, if there is a vehicle in front of the current vehicle then it gives a signal for the current vehicle to stop.
+ * It is also responsity for the drawing the vehicles.
+ * 
+ * @param current 
+ */
 void Jamalo::radar(Vehicle &current)
 {
     SDL_Rect moverc = current.getter();
@@ -58,6 +78,16 @@ void Jamalo::radar(Vehicle &current)
     // }
 }
 
+/**
+ * @brief Checks if any vehicles are currently colliding.
+ * 
+ * The function takes a Vehicle type object and compares it with all other Vehicles to see if their mover rectangles are overlapping or not, this is to check if the vehicles are colliding with each other or not.
+ * 
+ * @param v 
+ * @param vehicles 
+ * @return true 
+ * @return false 
+ */
 bool Jamalo::hitRegistered(Vehicle v, list<Vehicle> &vehicles)
 {
     SDL_Rect vc = v.getter();
@@ -77,6 +107,15 @@ bool Jamalo::hitRegistered(Vehicle v, list<Vehicle> &vehicles)
     return flag;
 }
 
+/**
+ * @brief Checks if vehicle is colliding with sheep.
+ * 
+ * The function is an overloaded instance which checks if the given vehicle is colliding with the sheep or not.
+ * 
+ * @param vehicle_hit 
+ * @return true 
+ * @return false 
+ */
 bool Jamalo::hitRegistered(Vehicle vehicle_hit)
 {
 
@@ -104,6 +143,12 @@ bool Jamalo::hitRegistered(Vehicle vehicle_hit)
 //         return false;
 // }
 
+/**
+ * @brief Draws all objects
+ * 
+ * Iterates over the list of all vehicles and calls their draw function. It also calls the draw function of all other objects.
+ * 
+ */
 void Jamalo::drawObjects()
 {
     // Vehicle *ptr = NULL;
@@ -147,6 +192,12 @@ void Jamalo::drawObjects()
     }
 }
 
+/**
+ * @brief Generates Vehicle type objects.
+ * 
+ * Randomly generates Vehicle type objects and randomly selects a lane for them to spawn in.
+ * 
+ */
 void Jamalo::createObjects()
 {
 
@@ -222,11 +273,24 @@ void Jamalo::createObjects()
     }
 }
 
+/**
+ * @brief Calls the move function of the Sheep and passes it the user input.
+ * 
+ * @param x 
+ */
 void Jamalo::move(char x)
 {
     j.move(x);
 }
 
+/**
+ * @brief Overloaded equality operator to check if two Vehicles have the same mover Rect.
+ * 
+ * @param v1 
+ * @param v2 
+ * @return true 
+ * @return false 
+ */
 bool operator==(Vehicle v1, Vehicle v2)
 {
     SDL_Rect r1 = v1.getter();

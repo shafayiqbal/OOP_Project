@@ -3,17 +3,35 @@
 #include "Sheep.hpp"
 using namespace std;
 
+/**
+ * @brief Construct a new Sheep:: Sheep object
+ * 
+ *  
+ * @param rend 
+ * @param ast 
+ */
 Sheep::Sheep(SDL_Renderer *rend, SDL_Texture *ast) : Unit(rend, ast)
 {
-
-    // put this in constructor !!!!
 }
 
+/**
+ * @brief Draws the sheep
+ * 
+ * Calls the draw function from the Unit class and passes the relevant functions to it.
+ * 
+ */
 void Sheep::draw()
 {
     Unit::draw(src, mover);
 }
 
+/**
+ * @brief Moves the sheep
+ * 
+ * The function takes input from the Jamalo class and moves the sheep based on the key pressed. If sheep is at the border then it prevents it from moving any further.
+ * 
+ * @param x 
+ */
 void Sheep::move(char x)
 {
 
@@ -39,11 +57,22 @@ void Sheep::move(char x)
     }
 }
 
+/**
+ * @brief The getter function for the mover rectangle of the Sheep.
+ * 
+ * @return SDL_Rect 
+ */
 SDL_Rect Sheep::getter() const
 {
     return mover;
 }
 
+/**
+ * @brief A function to display effects when sheep gets hit.
+ * 
+ * 
+ * 
+ */
 void Sheep::getHit()
 {
     cout << "SHEEP HIT !!!!!" << endl;

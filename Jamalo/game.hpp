@@ -8,6 +8,13 @@
 #include "Jamalo.hpp"
 #include <SDL_mixer.h>
 
+/**
+ * @brief Game class is the container for Jamalo class and handles input and output interfacing.
+ * 
+ * game class takes the inputs from the users and provides it to the jamalo class to be processed. It also takes care of the start and the end screens.
+ * 
+ */
+
 class Game
 {
     // Game state

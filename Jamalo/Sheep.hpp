@@ -2,6 +2,13 @@
 #include "Unit.hpp"
 using namespace std;
 
+/**
+ * @brief This class generates the Sheep 
+ * 
+ * The protagonist sheep and functionality related to its movement, drawing and the hit reactions are implemented here.
+ * 
+ */
+
 class Sheep : public Unit
 {
 

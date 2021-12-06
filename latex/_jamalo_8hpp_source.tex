@@ -1,0 +1,40 @@
+\hypertarget{_jamalo_8hpp_source}{}\doxysection{Jamalo.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <SDL.h>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Vehicle.hpp"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}Sheep.hpp"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}Timer.hpp"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Lives.hpp"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{8 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{class_jamalo}{Jamalo}}}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \mbox{\hyperlink{class_sheep}{Sheep}} j;}
+\DoxyCodeLine{26     list<Vehicle> vehicles;}
+\DoxyCodeLine{27     SDL\_Renderer *gRenderer;}
+\DoxyCodeLine{28     SDL\_Texture *assets;}
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} nLives;}
+\DoxyCodeLine{30     \mbox{\hyperlink{class_timer}{Timer}} t;}
+\DoxyCodeLine{31     \mbox{\hyperlink{class_lives}{Lives}} l1;}
+\DoxyCodeLine{32     \mbox{\hyperlink{class_lives}{Lives}} l2;}
+\DoxyCodeLine{33     \mbox{\hyperlink{class_lives}{Lives}} l3;}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{keyword}{public}:}
+\DoxyCodeLine{36     \mbox{\hyperlink{class_jamalo_ae5ae2fe9c0a81b5009815ed697500aec}{Jamalo}}(SDL\_Renderer *, SDL\_Texture *);}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jamalo_a18ff5cb0420386325026344627285089}{drawObjects}}();}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jamalo_a40653e873610c6c02eb395a905617751}{createObjects}}();}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jamalo_ab85d24831bcab19761bb7a84607fc292}{move}}(\textcolor{keywordtype}{char} x);}
+\DoxyCodeLine{40     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_jamalo_a2688314f9a5a13679edd5e216eda907b}{hitRegistered}}(\mbox{\hyperlink{class_vehicle}{Vehicle}} v);}
+\DoxyCodeLine{41     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_jamalo_a2688314f9a5a13679edd5e216eda907b}{hitRegistered}}(\mbox{\hyperlink{class_vehicle}{Vehicle}} v, list<Vehicle> \&vehicles);}
+\DoxyCodeLine{42     \textcolor{comment}{// bool hitRegistered()}}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jamalo_a7330ffeccab32f4152ea6ca8db2c965e}{radar}}(\mbox{\hyperlink{class_vehicle}{Vehicle}} \&currentV);}
+\DoxyCodeLine{44     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_jamalo_afadd2b290d8801bec20a3ab83a18e985}{isOver}}();}
+\DoxyCodeLine{45 \}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 ;}
+
+\end{DoxyCode}

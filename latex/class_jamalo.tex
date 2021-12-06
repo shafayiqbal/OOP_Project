@@ -1,0 +1,181 @@
+\hypertarget{class_jamalo}{}\doxysection{Jamalo Class Reference}
+\label{class_jamalo}\index{Jamalo@{Jamalo}}
+
+
+This is the Level Design class, and contains all other game related classes.  
+
+
+
+
+{\ttfamily \#include $<$Jamalo.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jamalo_ae5ae2fe9c0a81b5009815ed697500aec}{Jamalo}} (SDL\+\_\+\+Renderer $\ast$, SDL\+\_\+\+Texture $\ast$)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_jamalo}{Jamalo}}\+:\+: \mbox{\hyperlink{class_jamalo}{Jamalo}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jamalo_a18ff5cb0420386325026344627285089}{draw\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em Draws all objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jamalo_a40653e873610c6c02eb395a905617751}{create\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em Generates \mbox{\hyperlink{class_vehicle}{Vehicle}} type objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jamalo_ab85d24831bcab19761bb7a84607fc292}{move}} (char x)
+\begin{DoxyCompactList}\small\item\em Calls the move function of the \mbox{\hyperlink{class_sheep}{Sheep}} and passes it the user input. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_jamalo_a2688314f9a5a13679edd5e216eda907b}{hit\+Registered}} (\mbox{\hyperlink{class_vehicle}{Vehicle}} v)
+\begin{DoxyCompactList}\small\item\em Checks if vehicle is colliding with sheep. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_jamalo_ac4926bbbe72d6d212df8e98d6644b1b5}{hit\+Registered}} (\mbox{\hyperlink{class_vehicle}{Vehicle}} v, list$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ \&vehicles)
+\begin{DoxyCompactList}\small\item\em Checks if any vehicles are currently colliding. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jamalo_a7330ffeccab32f4152ea6ca8db2c965e}{radar}} (\mbox{\hyperlink{class_vehicle}{Vehicle}} \&currentV)
+\begin{DoxyCompactList}\small\item\em Implementation of radar system in the Vehicles. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_jamalo_afadd2b290d8801bec20a3ab83a18e985}{is\+Over}} ()
+\begin{DoxyCompactList}\small\item\em Checks game state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the Level Design class, and contains all other game related classes. 
+
+The \mbox{\hyperlink{class_jamalo}{Jamalo}} class aggregates all other game related classes, namely \mbox{\hyperlink{class_sheep}{Sheep}}, \mbox{\hyperlink{class_vehicle}{Vehicle}} and its childs, \mbox{\hyperlink{class_timer}{Timer}} and \mbox{\hyperlink{class_lives}{Lives}}. All top-\/level functionality is implemented in this class, the purpose of this class is to connect all objects in a proper manner, and to carry out class operations over them. Majority of the game mechanics are implemented here. This class\+: -\/Draws all objects -\/Creates all objects -\/Contains the radar system through which vehicles slow down if there is a vehicle in front of them -\/Checks for collisions between objects 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_jamalo_ae5ae2fe9c0a81b5009815ed697500aec}\label{class_jamalo_ae5ae2fe9c0a81b5009815ed697500aec}} 
+\index{Jamalo@{Jamalo}!Jamalo@{Jamalo}}
+\index{Jamalo@{Jamalo}!Jamalo@{Jamalo}}
+\doxysubsubsection{\texorpdfstring{Jamalo()}{Jamalo()}}
+{\footnotesize\ttfamily Jamalo\+::\+Jamalo (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{SDL\+\_\+\+Texture $\ast$}]{asst }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_jamalo}{Jamalo}}\+:\+: \mbox{\hyperlink{class_jamalo}{Jamalo}} object. 
+
+Creates a \mbox{\hyperlink{class_jamalo}{Jamalo}} type object and initializes values for all other objects in the game.
+
+
+\begin{DoxyParams}{Parameters}
+{\em renderer} & \\
+\hline
+{\em asst} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_jamalo_a40653e873610c6c02eb395a905617751}\label{class_jamalo_a40653e873610c6c02eb395a905617751}} 
+\index{Jamalo@{Jamalo}!createObjects@{createObjects}}
+\index{createObjects@{createObjects}!Jamalo@{Jamalo}}
+\doxysubsubsection{\texorpdfstring{createObjects()}{createObjects()}}
+{\footnotesize\ttfamily void Jamalo\+::create\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates \mbox{\hyperlink{class_vehicle}{Vehicle}} type objects. 
+
+Randomly generates \mbox{\hyperlink{class_vehicle}{Vehicle}} type objects and randomly selects a lane for them to spawn in. \mbox{\Hypertarget{class_jamalo_a18ff5cb0420386325026344627285089}\label{class_jamalo_a18ff5cb0420386325026344627285089}} 
+\index{Jamalo@{Jamalo}!drawObjects@{drawObjects}}
+\index{drawObjects@{drawObjects}!Jamalo@{Jamalo}}
+\doxysubsubsection{\texorpdfstring{drawObjects()}{drawObjects()}}
+{\footnotesize\ttfamily void Jamalo\+::draw\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws all objects. 
+
+Iterates over the list of all vehicles and calls their draw function. It also calls the draw function of all other objects. \mbox{\Hypertarget{class_jamalo_a2688314f9a5a13679edd5e216eda907b}\label{class_jamalo_a2688314f9a5a13679edd5e216eda907b}} 
+\index{Jamalo@{Jamalo}!hitRegistered@{hitRegistered}}
+\index{hitRegistered@{hitRegistered}!Jamalo@{Jamalo}}
+\doxysubsubsection{\texorpdfstring{hitRegistered()}{hitRegistered()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Jamalo\+::hit\+Registered (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vehicle}{Vehicle}}}]{vehicle\+\_\+hit }\end{DoxyParamCaption})}
+
+
+
+Checks if vehicle is colliding with sheep. 
+
+The function is an overloaded instance which checks if the given vehicle is colliding with the sheep or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vehicle\+\_\+hit} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jamalo_ac4926bbbe72d6d212df8e98d6644b1b5}\label{class_jamalo_ac4926bbbe72d6d212df8e98d6644b1b5}} 
+\index{Jamalo@{Jamalo}!hitRegistered@{hitRegistered}}
+\index{hitRegistered@{hitRegistered}!Jamalo@{Jamalo}}
+\doxysubsubsection{\texorpdfstring{hitRegistered()}{hitRegistered()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Jamalo\+::hit\+Registered (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vehicle}{Vehicle}}}]{v,  }\item[{list$<$ \mbox{\hyperlink{class_vehicle}{Vehicle}} $>$ \&}]{vehicles }\end{DoxyParamCaption})}
+
+
+
+Checks if any vehicles are currently colliding. 
+
+The function takes a \mbox{\hyperlink{class_vehicle}{Vehicle}} type object and compares it with all other Vehicles to see if their mover rectangles are overlapping or not, this is to check if the vehicles are colliding with each other or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & \\
+\hline
+{\em vehicles} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jamalo_afadd2b290d8801bec20a3ab83a18e985}\label{class_jamalo_afadd2b290d8801bec20a3ab83a18e985}} 
+\index{Jamalo@{Jamalo}!isOver@{isOver}}
+\index{isOver@{isOver}!Jamalo@{Jamalo}}
+\doxysubsubsection{\texorpdfstring{isOver()}{isOver()}}
+{\footnotesize\ttfamily bool Jamalo\+::is\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks game state. 
+
+Returns true if game is over i.\+e all 3 lives have been lost.
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jamalo_ab85d24831bcab19761bb7a84607fc292}\label{class_jamalo_ab85d24831bcab19761bb7a84607fc292}} 
+\index{Jamalo@{Jamalo}!move@{move}}
+\index{move@{move}!Jamalo@{Jamalo}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Jamalo\+::move (\begin{DoxyParamCaption}\item[{char}]{x }\end{DoxyParamCaption})}
+
+
+
+Calls the move function of the \mbox{\hyperlink{class_sheep}{Sheep}} and passes it the user input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_jamalo_a7330ffeccab32f4152ea6ca8db2c965e}\label{class_jamalo_a7330ffeccab32f4152ea6ca8db2c965e}} 
+\index{Jamalo@{Jamalo}!radar@{radar}}
+\index{radar@{radar}!Jamalo@{Jamalo}}
+\doxysubsubsection{\texorpdfstring{radar()}{radar()}}
+{\footnotesize\ttfamily void Jamalo\+::radar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vehicle}{Vehicle}} \&}]{current }\end{DoxyParamCaption})}
+
+
+
+Implementation of radar system in the Vehicles. 
+
+The function a vehicle and determines the distance between that vehicle and the vehicle in front of it, if there is a vehicle in front of the current vehicle then it gives a signal for the current vehicle to stop. It is also responsity for the drawing the vehicles.
+
+
+\begin{DoxyParams}{Parameters}
+{\em current} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Jamalo.\+hpp\item 
+Jamalo.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,120 @@
+\hypertarget{class_vehicle}{}\doxysection{Vehicle Class Reference}
+\label{class_vehicle}\index{Vehicle@{Vehicle}}
+
+
+\mbox{\hyperlink{class_vehicle}{Vehicle}} class, the parent for all vehicles.  
+
+
+
+
+{\ttfamily \#include $<$Vehicle.\+hpp$>$}
+
+Inheritance diagram for Vehicle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_vehicle}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vehicle_aac09d0587766b8f01af6aa58cd966614}{Vehicle}} (SDL\+\_\+\+Renderer $\ast$rend, SDL\+\_\+\+Texture $\ast$ast, SDL\+\_\+\+Rect mov, SDL\+\_\+\+Rect src, int s)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_vehicle}{Vehicle}}\+:\+: \mbox{\hyperlink{class_vehicle}{Vehicle}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vehicle_a391b29de205cd3a2501453aacf4df62a}{draw}} (bool flag)
+\begin{DoxyCompactList}\small\item\em Draws the Vehicles. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Rect \mbox{\hyperlink{class_vehicle_affcdc64755c68b0e34550b7720ead722}{getter}} () const
+\begin{DoxyCompactList}\small\item\em Returns mover rect of the \mbox{\hyperlink{class_vehicle}{Vehicle}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vehicle_a1193b1eb8d716fd8a2b574f081ec9efe}{change\+Lane\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Moves the car to the upper lane if any. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_vehicle_ac5ddd4b8627accc46054ecb0d5cfdf74}{change\+Lane\+Down}} ()
+\begin{DoxyCompactList}\small\item\em Moves the car to the lower lane if any. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_vehicle}{Vehicle}} class, the parent for all vehicles. 
+
+This class is inherited by \mbox{\hyperlink{class_bike}{Bike}}, \mbox{\hyperlink{class_car}{Car}}, Racecar, \mbox{\hyperlink{class_truck}{Truck}} and \mbox{\hyperlink{class_truck2}{Truck2}}. It provides all the functionality relating to the movement of the cars and their speed. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_vehicle_aac09d0587766b8f01af6aa58cd966614}\label{class_vehicle_aac09d0587766b8f01af6aa58cd966614}} 
+\index{Vehicle@{Vehicle}!Vehicle@{Vehicle}}
+\index{Vehicle@{Vehicle}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{Vehicle()}{Vehicle()}}
+{\footnotesize\ttfamily Vehicle\+::\+Vehicle (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{rend,  }\item[{SDL\+\_\+\+Texture $\ast$}]{ast,  }\item[{SDL\+\_\+\+Rect}]{mov,  }\item[{SDL\+\_\+\+Rect}]{src,  }\item[{int}]{s }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_vehicle}{Vehicle}}\+:\+: \mbox{\hyperlink{class_vehicle}{Vehicle}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rend} & \\
+\hline
+{\em ast} & \\
+\hline
+{\em mov} & \\
+\hline
+{\em src} & \\
+\hline
+{\em s} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_vehicle_ac5ddd4b8627accc46054ecb0d5cfdf74}\label{class_vehicle_ac5ddd4b8627accc46054ecb0d5cfdf74}} 
+\index{Vehicle@{Vehicle}!changeLaneDown@{changeLaneDown}}
+\index{changeLaneDown@{changeLaneDown}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{changeLaneDown()}{changeLaneDown()}}
+{\footnotesize\ttfamily void Vehicle\+::change\+Lane\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Moves the car to the lower lane if any. 
+
+The function carries out the process of making the car move to the lower lane, it is not being called as it contains bugs at the moment. \mbox{\Hypertarget{class_vehicle_a1193b1eb8d716fd8a2b574f081ec9efe}\label{class_vehicle_a1193b1eb8d716fd8a2b574f081ec9efe}} 
+\index{Vehicle@{Vehicle}!changeLaneUp@{changeLaneUp}}
+\index{changeLaneUp@{changeLaneUp}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{changeLaneUp()}{changeLaneUp()}}
+{\footnotesize\ttfamily void Vehicle\+::change\+Lane\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Moves the car to the upper lane if any. 
+
+The function carries out the process of making the car move to the upper lane, it is not being called as it contains bugs at the moment. \mbox{\Hypertarget{class_vehicle_a391b29de205cd3a2501453aacf4df62a}\label{class_vehicle_a391b29de205cd3a2501453aacf4df62a}} 
+\index{Vehicle@{Vehicle}!draw@{draw}}
+\index{draw@{draw}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Vehicle\+::draw (\begin{DoxyParamCaption}\item[{bool}]{flag }\end{DoxyParamCaption})}
+
+
+
+Draws the Vehicles. 
+
+The function calls the draw function of the \mbox{\hyperlink{class_unit}{Unit}} class, it also changes the mover rectangle based on the flag passed to it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vehicle_affcdc64755c68b0e34550b7720ead722}\label{class_vehicle_affcdc64755c68b0e34550b7720ead722}} 
+\index{Vehicle@{Vehicle}!getter@{getter}}
+\index{getter@{getter}!Vehicle@{Vehicle}}
+\doxysubsubsection{\texorpdfstring{getter()}{getter()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Rect Vehicle\+::getter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns mover rect of the \mbox{\hyperlink{class_vehicle}{Vehicle}} object. 
+
+\begin{DoxyReturn}{Returns}
+SDL\+\_\+\+Rect 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Vehicle.\+hpp\item 
+Vehicle.\+cpp\end{DoxyCompactItemize}

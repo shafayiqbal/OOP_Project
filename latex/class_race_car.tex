@@ -1,0 +1,77 @@
+\hypertarget{class_race_car}{}\doxysection{Race\+Car Class Reference}
+\label{class_race_car}\index{RaceCar@{RaceCar}}
+
+
+This is the class for the Racecar type objects.  
+
+
+
+
+{\ttfamily \#include $<$Racecar.\+hpp$>$}
+
+Inheritance diagram for Race\+Car\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_race_car}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_race_car_a594802d60e0a3e767a3000032f0f783b}{Race\+Car}} (SDL\+\_\+\+Renderer $\ast$rend, SDL\+\_\+\+Texture $\ast$ast, SDL\+\_\+\+Rect mov)
+\begin{DoxyCompactList}\small\item\em Construct a new Race \mbox{\hyperlink{class_car}{Car}}\+:\+: Race \mbox{\hyperlink{class_car}{Car}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_race_car_a1035f807e9b5ff0c247adc8a37f39964}{draw}} (bool flag)
+\begin{DoxyCompactList}\small\item\em Draws the Racecar type Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the class for the Racecar type objects. 
+
+This class inherits from \mbox{\hyperlink{class_vehicle}{Vehicle}} class and provides the sprite and mover coordinates to it. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_race_car_a594802d60e0a3e767a3000032f0f783b}\label{class_race_car_a594802d60e0a3e767a3000032f0f783b}} 
+\index{RaceCar@{RaceCar}!RaceCar@{RaceCar}}
+\index{RaceCar@{RaceCar}!RaceCar@{RaceCar}}
+\doxysubsubsection{\texorpdfstring{RaceCar()}{RaceCar()}}
+{\footnotesize\ttfamily Race\+Car\+::\+Race\+Car (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{rend,  }\item[{SDL\+\_\+\+Texture $\ast$}]{ast,  }\item[{SDL\+\_\+\+Rect}]{mov }\end{DoxyParamCaption})}
+
+
+
+Construct a new Race \mbox{\hyperlink{class_car}{Car}}\+:\+: Race \mbox{\hyperlink{class_car}{Car}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rend} & \\
+\hline
+{\em ast} & \\
+\hline
+{\em mov} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_race_car_a1035f807e9b5ff0c247adc8a37f39964}\label{class_race_car_a1035f807e9b5ff0c247adc8a37f39964}} 
+\index{RaceCar@{RaceCar}!draw@{draw}}
+\index{draw@{draw}!RaceCar@{RaceCar}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Race\+Car\+::draw (\begin{DoxyParamCaption}\item[{bool}]{flag }\end{DoxyParamCaption})}
+
+
+
+Draws the Racecar type Object. 
+
+Calls the draw function of \mbox{\hyperlink{class_vehicle}{Vehicle}} and passes the flag to the draw function of \mbox{\hyperlink{class_vehicle}{Vehicle}} class which then determines whether the Racecar will move forward or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Racecar.\+hpp\item 
+Racecar.\+cpp\end{DoxyCompactItemize}

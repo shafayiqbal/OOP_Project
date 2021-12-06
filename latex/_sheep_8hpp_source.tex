@@ -1,0 +1,27 @@
+\hypertarget{_sheep_8hpp_source}{}\doxysection{Sheep.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}Unit.hpp"{}}}
+\DoxyCodeLine{3 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_sheep}{Sheep}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_unit}{Unit}}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     SDL\_Rect src = \{16, 23, 43, 42\};}
+\DoxyCodeLine{17     SDL\_Rect mover = \{10, 430, 50, 50\};}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} nLives;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     \textcolor{comment}{// SDL\_Rect mover;}}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_sheep_a3dd3efffc1f08af7763bd735cfafa100}{Sheep}}(SDL\_Renderer *rend, SDL\_Texture *ast);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     SDL\_Rect \mbox{\hyperlink{class_sheep_a7e3093a1c75ee284602459573f6a611d}{getter}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sheep_a1dc0375456d1bd9f9d157d3dfe7f9eeb}{draw}}();}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sheep_a2640e14c762e83d2ce06d6d1453b95b7}{move}}(\textcolor{keywordtype}{char} x);}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_sheep_afbe9cd243dd99adc299f99c0b0a0bc0f}{getHit}}();}
+\DoxyCodeLine{28     \textcolor{comment}{// friend bool Jamalo::hitRegistered(Vehicle v);}}
+\DoxyCodeLine{29 \};}
+
+\end{DoxyCode}

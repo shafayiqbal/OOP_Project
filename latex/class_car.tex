@@ -1,0 +1,77 @@
+\hypertarget{class_car}{}\doxysection{Car Class Reference}
+\label{class_car}\index{Car@{Car}}
+
+
+This is the class for the \mbox{\hyperlink{class_car}{Car}} type objects.  
+
+
+
+
+{\ttfamily \#include $<$Car.\+hpp$>$}
+
+Inheritance diagram for Car\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_car}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_car_aba0893039da92993ea74ac0fb43365eb}{Car}} (SDL\+\_\+\+Renderer $\ast$rend, SDL\+\_\+\+Texture $\ast$ast, SDL\+\_\+\+Rect mov)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_car}{Car}}\+:\+: \mbox{\hyperlink{class_car}{Car}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_car_a770130306f1c330dde862eb2802a7e5d}{draw}} (bool flag)
+\begin{DoxyCompactList}\small\item\em Draws the \mbox{\hyperlink{class_car}{Car}} type Object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the class for the \mbox{\hyperlink{class_car}{Car}} type objects. 
+
+This class inherits from \mbox{\hyperlink{class_vehicle}{Vehicle}} class and provides the sprite and mover coordinates to it. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_car_aba0893039da92993ea74ac0fb43365eb}\label{class_car_aba0893039da92993ea74ac0fb43365eb}} 
+\index{Car@{Car}!Car@{Car}}
+\index{Car@{Car}!Car@{Car}}
+\doxysubsubsection{\texorpdfstring{Car()}{Car()}}
+{\footnotesize\ttfamily Car\+::\+Car (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer $\ast$}]{rend,  }\item[{SDL\+\_\+\+Texture $\ast$}]{ast,  }\item[{SDL\+\_\+\+Rect}]{mov }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_car}{Car}}\+:\+: \mbox{\hyperlink{class_car}{Car}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rend} & \\
+\hline
+{\em ast} & \\
+\hline
+{\em mov} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_car_a770130306f1c330dde862eb2802a7e5d}\label{class_car_a770130306f1c330dde862eb2802a7e5d}} 
+\index{Car@{Car}!draw@{draw}}
+\index{draw@{draw}!Car@{Car}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Car\+::draw (\begin{DoxyParamCaption}\item[{bool}]{flag }\end{DoxyParamCaption})}
+
+
+
+Draws the \mbox{\hyperlink{class_car}{Car}} type Object. 
+
+Calls the draw function of \mbox{\hyperlink{class_vehicle}{Vehicle}} and passes the flag to the draw function of \mbox{\hyperlink{class_vehicle}{Vehicle}} class which then determines whether the \mbox{\hyperlink{class_car}{Car}} will move forward or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Car.\+hpp\item 
+Car.\+cpp\end{DoxyCompactItemize}
